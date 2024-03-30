@@ -56,18 +56,17 @@ while i >= 2:
        print(i)
 ```
 ```mermaid
-graph TD;
-    A(Digite número n) --> B{Verificar n ≥ 2}
-    B -- No --> C[Imprimir: n no cumple condición]
-    B -- Sí --> D{Verificar n es par}
-    D -- No --> E[Acercar n a par más cercano]
-    E --> F[Iniciar ciclo]
-    D -- Sí --> F
-    F --> G[Imprimir n]
-    G --> H{Disminuir n en 2}
-    H --> I{n < 2}
-    I -- Sí --> J[Fin]
-    I -- No --> G
+flowchart TD;
+    A(Inicio) --> B[número i ≥ 2];
+    B -->C
+    C{es mayor o igual que 2?} -- Sí --> D[igual que 2];
+    C-- No --> d[Mayor que 2];
+    D-->E[Termina el ciclo] 
+    d-->F[i-= i]
+    D-->g
+    F-->g[i % 2 == 0,verifica si es par]
+    g-->i[se imprimen los primos de i en forma descendente]
+    i-->y[fin]
 ```
 4. En 2022 el país A tendrá una población de 25 millones de habitantes y el país B de 18.9 millones. Las tasas de crecimiento anual de la población serán de 2% y 3% respectivamente. Desarrollar un algoritmo para informar en que año la población del país B superará a la de A.
 

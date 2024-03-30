@@ -2,7 +2,9 @@
 1. Imprimir un listado con los números del 1 al 100 cada uno con su respectivo cuadrado.
 
 ```python
-i = 1  
+#Nombramos nuestra variable i 
+i = 1
+#i es el listado de números del 1 al 100
 while i <= 100:  
     print(i, i ** 2)
     i += 1
